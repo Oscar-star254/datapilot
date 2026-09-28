@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --font-sans: var(--font-sans-family);
+  --font-display: var(--font-display-family);
+  --font-mono: var(--font-mono-family);
+}
+
+:root {
+  --background: #0c1015;
+  --foreground: #e2e8f0;
+  --card: #131820;
+  --card-foreground: #e2e8f0;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #1e2535;
+  --secondary-foreground: #94a3b8;
+  --muted: #1a2132;
+  --muted-foreground: #64748b;
+  --accent: #06b6d4;
+  --accent-foreground: #ffffff;
+  --border: #1e2d3d;
+  --ring: #3b82f6;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --radius: 6px;
+  --font-sans-family: 'Inter', system-ui, sans-serif;
+  --font-display-family: 'DM Sans', system-ui, sans-serif;
+  --font-mono-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #475569;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #0891b2;
+  --accent-foreground: #ffffff;
+  --border: #e2e8f0;
+  --ring: #2563eb;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --success: #16a34a;
+  --warning: #d97706;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  font-family: var(--font-sans-family);
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
+
+::selection { background: color-mix(in srgb, var(--primary) 30%, transparent); }
+:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+.data-table th { font-family: var(--font-mono-family); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; }
+.data-table td { font-family: var(--font-mono-family); font-size: 12px; }
+
+.react-grid-item.react-grid-placeholder { background: var(--primary); opacity: 0.1; border-radius: var(--radius); }
+.react-resizable-handle { opacity: 0.4; }
+.react-resizable-handle:hover { opacity: 1; }
+
+.drag-handle { cursor: grab; }
+.drag-handle:active { cursor: grabbing; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+.animate-fadein { animation: fadeIn 0.2s ease-out; }

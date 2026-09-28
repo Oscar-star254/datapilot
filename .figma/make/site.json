@@ -1,0 +1,10 @@
+{
+  "description": "Enables users to upload, clean, analyze, and visualize datasets with interactive charts and dashboards, supporting collaborative data-driven insights.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
